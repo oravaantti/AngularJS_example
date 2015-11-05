@@ -1,7 +1,22 @@
-<h1>Here are your friends</h1>
-<div>
-    <ol>
-       <li ng-repeat="person in person.data">{{person.name}}, {{person.address}}, {{person.age}}</li> 
-    </ol>
+<div class="friends-table">
+    <div class="center-link"><h4>List of your friends</h4></div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Age</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="per in person.data">
+                <td>{{per.name}}</td>
+                <td>{{per.address}}</td>
+                <td>{{per.age}}</td>
+                <td><input type="button" value="Delete" ng-click="person.deletePerson(per._id)" /></td>
+            </tr> 
+        </tbody>
+    </table>
+    <div class="center-link"><a href="#/">Show view 1</a></div>
 </div>
-<a href="#/">Show view 1</a>

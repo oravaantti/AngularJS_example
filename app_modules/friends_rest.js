@@ -7,21 +7,20 @@ var router = express.Router();
  // REST API for Friends collection
 //----------------------------------
 
-router.get("/", function(res, req) {
-    
-    friends.getAllFriends(res, req);
+router.get("/", function(req, res) {
+    friends.getAllFriends(req, res);
 });
 
-router.post("/", function(res, req) {
+router.post("/", function(req, res) {
+    friends.addFriend(req, res);
+});
+
+router.put("/", function(req, res) {
     
 });
 
-router.put("/", function(res, req) {
-    
-});
-
-router.delete("/", function(res, req) {
-    
+router.delete("/", function(req, res) {
+    friends.deleteFriend(req, res);
 });
 
 module.exports = router;

@@ -21,8 +21,9 @@ app.use(function(req, res, next){
 app.use(express.static(path.join(__dirname, "views")));
 app.use("/lib", express.static(path.join(__dirname, "lib")));
 app.use("/scr", express.static(path.join(__dirname, "scr")));
+app.use("/css", express.static(path.join(__dirname, "css")));
 
-app.use(bodyParser());
+app.use(bodyParser.json());
 
 app.use("/friend", friends_rest);
 

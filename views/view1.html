@@ -1,6 +1,14 @@
-<h1>This is view 1</h1>
-<input type="text" placeholder="Name" ng-model="person.name" /> <br />
-<input type="text" placeholder="Address" ng-model="person.address" /> <br />
-<input type="text" placeholder="Age" ng-model="person.age" /> <br />
-<input type="button" value="Save" ng-click="person.addPerson()" /> <br />
-<a href="#/friends">Show view 2</a>
+<form>
+    <h4>Add new person</h4>
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="Name" ng-model="person.name" /> <br />
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="Address" ng-model="person.address" /> <br />
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="Age" ng-model="person.age" /> <br />
+    </div>
+        <input class="btn btn-default addPersonButton" type="button" value="Save" ng-click="person.addPerson()" /> <br />
+    <a href="#/friends">Show view 2</a>
+</form>

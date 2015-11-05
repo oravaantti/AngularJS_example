@@ -1,0 +1,37 @@
+body {
+    background-color: #F8F8FC;
+}
+
+form {
+    width: 300px;
+    margin: 25px auto;
+    border: 1px solid #BBB;
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 25px;
+}
+
+.addPersonButton {
+    margin-bottom: 20px;
+}
+.form-group {
+    margin: 0;
+}
+
+.friends-table {
+    width: 500px;
+    margin: 25px auto;
+    border: 1px solid #BBB;
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    padding: 10px 25px;
+}
+.friends-table tbody tr:hover {
+    background-color: #DDD;
+}
+
+.center-link {
+    width: 100%;
+    text-align: center;
+}
