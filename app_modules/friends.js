@@ -11,11 +11,13 @@ exports.addFriend = function(req, res) {
 }
 
 exports.updateFriend = function(req, res) {
-    
+    friends.Friend.update({_id:req.query._id}, {name: req.query.name, address: req.query.address, age: req.query.age}, {}, function(err) {
+        if(err) console.log("Update unsuccessful");
+        else console.log("Update done");
+    });
 }
 
 exports.deleteFriend = function(req, res) {
-    console.log(req.query._id);
     friends.Friend.remove({_id:req.query._id}, function(err) {
         if(err) console.log("Delete unsuccessful");
         else console.log("Delete done");
