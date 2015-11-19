@@ -15,7 +15,8 @@ var Friends = mongoose.model("friends", {
 
 var User = mongoose.model("user", {
     username: {type: String, unique: true},
-    password: String
+    password: String,
+    friend: [{type: mongoose.Schema.Types.ObjectId, ref: "friends"}]
 });
 
 exports.Friend = Friends;

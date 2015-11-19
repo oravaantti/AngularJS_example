@@ -6,7 +6,12 @@ exports.addFriend = function(req, res) {
     
     temp.save(function(err) {
         if(err) res.send("Error saving person");
-        else res.send("New friend added");
+        else  {
+            friends.User.update({username: req.session.username},
+                                {$push: {"friend": temp._id}}, function() {
+                res.send("Ok");
+            });
+        }
     });
 }
 
@@ -25,8 +30,9 @@ exports.deleteFriend = function(req, res) {
 }
 
 exports.getAllFriends = function(req, res) {
-    friends.Friend.find(function(err, data) {
+    
+    friends.User.findOne({username: req.session.username}).populate("friend").exec(function(err, data){
         if(err) res.send("Something went wrong");
-        else res.send(data);
+        else res.send(data.friend);
     });
 }

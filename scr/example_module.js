@@ -4,6 +4,10 @@ var my_module = angular.module("root_module", ["ngRoute", "ngResource"]);
 // Configure routes
 my_module.config(function($routeProvider){
     $routeProvider.when("/", {
+        controller: "loginController",
+        templateUrl:"login.html"
+        
+    }).when("/main", {
         controller: "personController",
         templateUrl:"view1.html"
         

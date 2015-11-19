@@ -18,22 +18,22 @@
             </tr> 
         </tbody>
     </table>
-    <div class="center-link"><a href="#/">Show view 1</a></div>
+    <div class="center-link"><a href="#/main">Show view 1</a></div>
 </div>
 
 <div class="darkOverlay">
     <form class="popup">
-    <h4>Edit person</h4>
-    <div class="form-group">
-        <input class="form-control" type="text" placeholder="Name" ng-model="person.nameEdit" /> <br />
-    </div>
-    <div class="form-group">
-        <input class="form-control" type="text" placeholder="Address" ng-model="person.addressEdit" /> <br />
-    </div>
-    <div class="form-group">
-        <input class="form-control" type="text" placeholder="Age" ng-model="person.ageEdit" /> <br />
-    </div>
+        <h4>Edit person</h4>
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="Name" ng-model="person.nameEdit" /> <br />
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="Address" ng-model="person.addressEdit" /> <br />
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="Age" ng-model="person.ageEdit" /> <br />
+        </div>
         <input class="btn btn-default editPersonButton" type="button" value="Save changes" ng-click="person.saveEditedPerson()" />
         <input class="btn btn-default cancelEditButton" type="button" value="Cancel" ng-click="person.cancelEdit()" />
-</form>
+    </form>
 </div>
